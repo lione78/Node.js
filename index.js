@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
     .then((response) => response.json())
     .then((data) => data.forEach(element => {
         element.title
-    })).then((title) => title)
+    })).then((title) => res.send(title))
 })
 
 app.listen(port, () => {
