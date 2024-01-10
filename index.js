@@ -95,6 +95,6 @@ app.put('/posts/:pid', function (req, res) {
 
 app.delete('/posts/:pid', function (req, res) {
     const { pid } = req.params;
-    dbData.splice(pid - 1, Number(pid)+ 2);
-    res.send(dbData.slice(Number(pid)-2, Number(pid)+ 2));
+    dbData.splice(pid - 1, 1);
+    res.send(dbData.slice(Number(pid)-2, Number(pid)));
 });
